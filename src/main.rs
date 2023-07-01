@@ -9,8 +9,7 @@ fn main() {
 
 
     // TODO
-    // Maintenant que je selectionne le répertoire literature, il faut naviguer dedans et copier coller les fichiers
-    // CF python script
+    // COller directement le lien et naviiguer dans le dossier
 
     let string_path = path + "Exported Items/files/";
     path_utils::move_and_delete_folder(string_path);
