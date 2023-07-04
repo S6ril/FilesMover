@@ -24,22 +24,16 @@ impl eframe::App for MyApp {
                 ui.label("\nSelected folder:");
                 ui.monospace(picked_path);
                 
-                if ui.button("Process files").clicked() {
-                    println!("Process files");
-                    let len = picked_path.len();
-                    
-                    if &picked_path[len-5..] == "files" {
-                        println!("OK");
-                        self.process_folder = Some(true);
-                        path_utils::move_and_delete_folder(picked_path.to_owned());
-                    }
-                    else {
-                        println!("Please select the file folder");
-                        self.process_folder = Some(false);
-                    }
+                ui.vertical_centered(|ui| {
+                    // TODO name of the folder in the button.
+                    if ui.button("Process files").clicked() {
+                        println!("Process files");
+                            self.process_folder = Some(true);
+                            path_utils::move_and_delete_folder(picked_path.to_owned());
+                        }
+                    });
                 }
         
-            }
             if let Some(process_folder) = self.process_folder {
                 if process_folder {
                     ui.label("\nPDFs files moved !");
@@ -48,13 +42,9 @@ impl eframe::App for MyApp {
                         frame.close();
                     }
                 }
-                else {
-                    ui.label("\nPlease select the folder named \"files\"");
                 }
-            }          
+            
         });
-
     }
 }
-
 
