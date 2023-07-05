@@ -3,6 +3,7 @@
 This script moves files stored in a folder to the parent folder for easier access. Other files are deleted.
 It is intended to be used when exporting libraries with the software [Zotero](https://www.zotero.org/).
 
+❗ All child folder are deleted, with the content ❗
 
 <div align="center">
 <img src="./images/main.png"  width="275"/>
@@ -10,6 +11,8 @@ It is intended to be used when exporting libraries with the software [Zotero](ht
 [Download](https://github.com/S6ril/FilesMover/releases/)
 
 </div>
+
+
 
 
 ## Quick use
