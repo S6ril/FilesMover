@@ -47,7 +47,8 @@ impl eframe::App for MyApp {
                 
                 ui.vertical_centered(|ui| {
                     if let Some(name_folder) = &self.name_folder {
-                        if ui.button("Process files:\n".to_owned() + &(name_folder)).clicked() {
+                        let name = "Process the folder: ".to_owned() + &(name_folder);
+                        if ui.button(name).clicked() {
                             println!("Process files");
                             self.process_folder = true;
 
