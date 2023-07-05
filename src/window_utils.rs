@@ -3,11 +3,23 @@ use crate::path_utils;
 
 
 
-#[derive(Default)]
+// #[derive(Default)]
 pub struct MyApp {
     picked_path: Option<String>,
-    process_folder: Option<bool>,
     name_folder: Option<String>,
+    process_folder: bool,
+    pdf_only: bool,
+}
+
+impl Default for MyApp {
+    fn default() -> Self {
+        Self {
+            picked_path: None,
+            name_folder: None,
+            process_folder: false,
+            pdf_only: true,
+        }
+    }
 }
 
 impl eframe::App for MyApp {
@@ -26,6 +38,9 @@ impl eframe::App for MyApp {
                 }
             }
 
+            ui.checkbox(&mut self.pdf_only, "PDF only")
+                .on_hover_text("Uncheck to move all files. Check to move only PDFs");
+
             if let Some(picked_path) = &self.picked_path {
                 ui.label("\nSelected folder:");
                 ui.monospace(picked_path);
@@ -34,28 +49,27 @@ impl eframe::App for MyApp {
                     if let Some(name_folder) = &self.name_folder {
                         if ui.button("Process files:\n".to_owned() + &(name_folder)).clicked() {
                             println!("Process files");
-                                self.process_folder = Some(true);
-                                path_utils::move_and_delete_folder(picked_path.to_owned());
-                            }
+                            self.process_folder = true;
+
+                            path_utils::move_and_delete_folder(picked_path.to_owned(), self.pdf_only);
                         }
-                    });
-                }
+                    }
+                });
+            }
         
-            if let Some(process_folder) = self.process_folder {
-                if process_folder {
-                    ui.label("\nPDFs files moved !");
-                    
-                    ui.horizontal(|ui| {
-                        if ui.button("Open in file explorer").clicked() {
-                            println!("Open folder");
-                            let _ = open::that(self.picked_path.clone().unwrap());
-                        }
-                        
-                        if ui.button("Exit").clicked() {
-                            frame.close();
-                        }
-                    });
-                }
+            if self.process_folder {
+                ui.label("\nPDFs files moved !");
+                
+                ui.horizontal(|ui| {
+                    if ui.button("Open in file explorer").clicked() {
+                        println!("Open folder");
+                        let _ = open::that(self.picked_path.clone().unwrap());
+                    }
+
+                    if ui.button("Exit").clicked() {
+                        frame.close();
+                    }
+                });
             }
             
         });
