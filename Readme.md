@@ -12,6 +12,7 @@ It is intended to be used when exporting libraries with the software [Zotero](ht
 ## Quick use
 
 This script move file from child folder to parent folder.
+<div align="center">
 
 <table>
 <thead>
@@ -49,6 +50,7 @@ files
 </tr>
 </tbody>
 </table>
+</div>
 
 Only select the parent file, and click `Process files`!
 
