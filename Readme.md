@@ -12,9 +12,8 @@ It is intended to be used when exporting libraries with the software [Zotero](ht
 ## Quick use
 
 This script move file from child folder to parent folder.
-<div align="center">
 
-<table>
+<table  align="center">
 <thead>
   <tr>
     <th>Before</th>
@@ -26,23 +25,23 @@ This script move file from child folder to parent folder.
 <td>
     
 ```bash                         
-files
-    ├───1210
-    │       A.pdf
-    ├───1264
-    │       B.html  
-    ├─── ***
-    └───C.pdf
+files              
+    ├───1210       
+    │       A.pdf  
+    ├───1264       
+    │       B.html 
+    ├─── ***       
+    └───C.pdf      
 ```
 </td>
 <td>
 
 ```bash 
-files
-    ├───A.pdf
-    ├───B.html  
-    ├─── ***
-    └───C.pdf
+files          
+    ├───A.pdf  
+    ├───B.html 
+    ├─── ***   
+    └───C.pdf  
 
 
 ``` 
@@ -50,7 +49,6 @@ files
 </tr>
 </tbody>
 </table>
-</div>
 
 Only select the parent file, and click `Process files`!
 
