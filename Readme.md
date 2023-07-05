@@ -64,6 +64,17 @@ Only select the parent file, and click `Process files`!
 * Now you can select the folder `files` with the tool.
 
 
+## Credits
 
+<div align="center">
 
+| Libraries  | Version |
+| ---------- | ------- |
+| eframe     | 0.22.0  |
+| egui       | 0.22.0  |
+| env_logger | 0.10.0  |
+| open       | 5.0.0   |
+| rfd        | 0.11.4  |
+
+</div>
 
