@@ -4,9 +4,12 @@ This script moves only PDFs stored in a folder to the parent folder for easier a
 It is intended to be used when exporting libraries with the software [Zotero](https://www.zotero.org/).
 
 
-<p align="center">
-  <img src="./images/main.png"  width="275"/>
-</p>
+<div align="center">
+<img src="./images/main.png"  width="275"/>
+
+[Download](https://github.com/S6ril/FilesMover/releases/)
+
+</div>
 
 
 ## Quick use
