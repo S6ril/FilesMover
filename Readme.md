@@ -66,15 +66,36 @@ Only select the parent file, and click `Process files`!
 
 ## Credits
 
-<div align="center">
+<table  align="center">
+<thead>
+  <tr>
+    <th>Libraries</th>
+    <th>Version</th>
+  </tr>
+</thead>
+<tbody>
+<tr>
+    <td>eframe</td>
+    <td>0.22.0</td>
+</tr>
+<tr>
+    <td>egui</td>
+    <td>0.22.0</td>
+</tr>
+<tr>
+    <td>env_logger</td>
+    <td>0.10.0</td>
+</tr>
+<tr>
+    <td>open</td>
+    <td>5.0.0</td>
+</tr>
+<tr>
+    <td>rfd</td>
+    <td> 0.11.4</td>
+</tr>
+</tbody>
+</table>
 
-| Libraries  | Version |
-| ---------- | ------- |
-| eframe     | 0.22.0  |
-| egui       | 0.22.0  |
-| env_logger | 0.10.0  |
-| open       | 5.0.0   |
-| rfd        | 0.11.4  |
 
-</div>
 
