@@ -26,7 +26,10 @@ fn search_file(entry: PathBuf, pdf_only: bool){
         }
 }
 
-
+/// With a given path, move file in child folder into parent folder and delete the child folder.
+/// 
+/// ⚠️ This script delete the child folder even if it is not empty. ⚠️
+/// 
 pub fn move_and_delete_folder(string_path: String, pdf_only: bool){
     
     let file_path = Path::new(&string_path );
