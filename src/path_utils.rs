@@ -1,12 +1,14 @@
 use std::{fs, path::{PathBuf, Path}};
 
+/// Function to move the file from the child to the parent folder. 
 fn move_file2parent(file_folder: PathBuf) {
     let new_name = file_folder.parent().unwrap().parent().unwrap().join(file_folder.file_name().unwrap());
     fs::rename(file_folder, new_name ).unwrap();
 }
 
 
-fn move_file(entry: PathBuf, pdf_only: bool){
+/// Function to browse all folder and to select a file.
+fn search_file(entry: PathBuf, pdf_only: bool){
         if entry.is_dir() {
             println!("{:?}", entry);
 
@@ -31,7 +33,7 @@ pub fn move_and_delete_folder(string_path: String, pdf_only: bool){
 
     for entry in fs::read_dir(file_path).expect("unable to get entry") {
         let path = entry.expect("unable to get path").path();
-        move_file(path.clone(), pdf_only);
+        search_file(path.clone(), pdf_only);
         let _ = fs::remove_dir_all(path);
         
     }

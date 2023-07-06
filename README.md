@@ -6,7 +6,7 @@ It is intended to be used when exporting libraries with the software [Zotero](ht
 ❗ All child folder are deleted, with the content ❗
 
 <div align="center">
-<img src="./images/main.png"  width="275"/>
+<img src="https://raw.githubusercontent.com/S6ril/FilesMover/master/images/main.png"  width="275"/>
 
 [Download](https://github.com/S6ril/FilesMover/releases/)
 
@@ -59,7 +59,7 @@ files
 Only select the parent file, and click `Process files`!
 
 <p align="center">
-  <img src="./images/Animation.gif" width="80%"/>
+  <img src="https://raw.githubusercontent.com/S6ril/FilesMover/master/images/Animation.gif" width="80%"/>
 </p>
 
 ## Generate folder with the PDFs - Zotero
